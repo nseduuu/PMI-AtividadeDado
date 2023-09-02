@@ -9,31 +9,38 @@
             Padding="30,0"
             VerticalOptions="Center">
 
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
-
             <Label
-                Text="Hello, World!"
+                Text="Rolador de Dados"
                 SemanticProperties.HeadingLevel="Level1"
                 FontSize="32"
                 HorizontalOptions="Center" />
 
             <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
+                Text="6"
+                x:Name="numeroTela"
+                FontSize="80"
                 HorizontalOptions="Center" />
+
+            <Picker
+                HorizontalOptions="Center"
+                x:Name="picker"
+                Title="Quantidade de dados">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>4</x:String>
+                        <x:String>6</x:String>
+                        <x:String>10</x:String>
+                        <x:String>20</x:String>
+                        <x:String>100</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
 
             <Button
                 x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
+                Text="Rolar o dado"
+                HorizontalOptions="Center"
+                Clicked="OnClicked"/>
 
         </VerticalStackLayout>
     </ScrollView>

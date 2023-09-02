@@ -2,23 +2,23 @@
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
-
 	public MainPage()
 	{
 		InitializeComponent();
 	}
 
-	private void OnCounterClicked(object sender, EventArgs e)
+    public void OnClicked(object sender, EventArgs e)
 	{
-		count++;
+        int min = 1;
+        var numLista = picker.SelectedItem;
 
-		if (count == 1)
-			CounterBtn.Text = $"Clicked {count} time";
-		else
-			CounterBtn.Text = $"Clicked {count} times";
+        int max = int.Parse(numLista.ToString());
 
-		SemanticScreenReader.Announce(CounterBtn.Text);
-	}
+        Random rnd= new Random();
+
+        int numeroGerado = rnd.Next(min, max);
+        numeroTela.Text = numeroGerado.ToString();
+        
+    }
 }
 
