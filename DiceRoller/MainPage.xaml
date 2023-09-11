@@ -6,25 +6,27 @@
     <ScrollView>
         <VerticalStackLayout
             Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
+            Padding="30,0">
 
             <Label
                 Text="Rolador de Dados"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
+
+                FontSize="48"
+                HorizontalOptions="Center"
+                Margin="30"/>
 
             <Label
                 Text="6"
-                x:Name="numeroTela"
-                FontSize="80"
-                HorizontalOptions="Center" />
+                x:Name="NumeroSorteado"
+                FontSize="48"
+                HorizontalOptions="Center"
+                Margin="30"/>
 
+           <!--> 
             <Picker
                 HorizontalOptions="Center"
-                x:Name="picker"
-                Title="Quantidade de dados">
+                x:Name="SeletorDeLadosDoDado"
+                Margin="30">
                 <Picker.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
                         <x:String>4</x:String>
@@ -35,12 +37,28 @@
                     </x:Array>
                 </Picker.ItemsSource>
             </Picker>
+            <!-->
+            <Picker
+                HorizontalOptions="Center"
+                x:Name="SeletorDeLadosDoDado"
+                Margin="30">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:Int32}">
+                        <x:Int32>4</x:Int32>
+                        <x:Int32>6</x:Int32>
+                        <x:Int32>10</x:Int32>
+                        <x:Int32>20</x:Int32>
+                        <x:Int32>100</x:Int32>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
 
             <Button
                 x:Name="CounterBtn"
                 Text="Rolar o dado"
                 HorizontalOptions="Center"
-                Clicked="OnClicked"/>
+                Clicked="OnClicked"
+                Margin="30"/>
 
         </VerticalStackLayout>
     </ScrollView>
