@@ -38,6 +38,8 @@
                 </Picker.ItemsSource>
             </Picker>
             <!-->
+            
+            <!-->Correção<!-->
             <Picker
                 HorizontalOptions="Center"
                 x:Name="SeletorDeLadosDoDado"
