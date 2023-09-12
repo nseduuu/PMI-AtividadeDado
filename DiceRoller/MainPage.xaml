@@ -21,8 +21,7 @@
                 SemanticProperties.Description="A dice with the number 1 facing up"
                 HeightRequest="200"
                 HorizontalOptions="Center" />
-            
-            
+
             <Label
                 Text="6"
                 x:Name="NumeroSorteado"
@@ -30,25 +29,6 @@
                 HorizontalOptions="Center"
                 Margin="30"/>
 
-            
-           <!--> 
-            <Picker
-                HorizontalOptions="Center"
-                x:Name="SeletorDeLadosDoDado"
-                Margin="30">
-                <Picker.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>4</x:String>
-                        <x:String>6</x:String>
-                        <x:String>10</x:String>
-                        <x:String>20</x:String>
-                        <x:String>100</x:String>
-                    </x:Array>
-                </Picker.ItemsSource>
-            </Picker>
-            <!-->
-            
-            <!-->Correção<!-->
             <Picker
                 HorizontalOptions="Center"
                 x:Name="SeletorDeLadosDoDado"
