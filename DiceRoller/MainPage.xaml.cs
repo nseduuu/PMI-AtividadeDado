@@ -28,12 +28,21 @@ public partial class MainPage : ContentPage
 
     public void OnClicked(object sender, EventArgs e)
 	{
+        int numSides = (int)SeletorDeLadosDoDado.SelectedItem;
 
-        Dice dado = new Dice((int)SeletorDeLadosDoDado.SelectedItem); // aqui o valor de lados do dado vai ser definido pelo picker
+        Dice dice = new Dice(numSides);
 
-        var numeroSorteado = dado.RollDice(); // aqui o numero sorteado vai receber o metodo random 
+        NumeroSorteado.Text = dice.RollDice().ToString();
 
-        NumeroSorteado.Text = numeroSorteado.ToString(); // aqui o valor do NumeroSorteado recebe o numeroSorteado pelo metodo random
+        diceImage.Source = ImageSource.FromFile($"dice_d{numSides}.png");
+
+        //Dice dado = new Dice((int)SeletorDeLadosDoDado.SelectedItem); // aqui o valor de lados do dado vai ser definido pelo picker
+
+        //var numeroSorteado = dado.RollDice(); // aqui o numero sorteado vai receber o metodo random 
+
+        //NumeroSorteado.Text = numeroSorteado.ToString(); // aqui o valor do NumeroSorteado recebe o numeroSorteado pelo metodo random
+
+
 
         //int min = 1;
         //var numLista = SeletorDeLadosDoDado.SelectedItem;

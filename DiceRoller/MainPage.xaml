@@ -15,6 +15,14 @@
                 HorizontalOptions="Center"
                 Margin="30"/>
 
+            <Image
+                x:Name="diceImage"
+                Source="dice_d4.png"
+                SemanticProperties.Description="A dice with the number 1 facing up"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+            
+            
             <Label
                 Text="6"
                 x:Name="NumeroSorteado"
@@ -22,6 +30,7 @@
                 HorizontalOptions="Center"
                 Margin="30"/>
 
+            
            <!--> 
             <Picker
                 HorizontalOptions="Center"
